@@ -1,26 +1,47 @@
-idade = int(input("Qual sua idade?"))
-nome = input("Qual sua seu nome?")
+nota1 = float(input("Qual sua 1ª nota?"))
+nota2 = float(input("Qual sua 2ª nota?"))
+nota3 = float(input("Qual sua 3º nota?"))
 
-if idade >= 18:
-    print(f"O {nome} tem {idade} anos e é maior de idade!")
+notas = [nota1, nota2, nota3]
+media = sum(notas)/ len(notas)
+notaRecuperacao = 7 - media
+maiorNota = 0
+
+if media >= 7:
+    print(f"Aluno aprovado!")
+elif media >= 5 and media < 7:
+    print(f"Aluno em recuperação! precisando de {notaRecuperacao} ")
 else:
-    print(f"O {nome} tem {idade} e ainda é menor de idade!")
+    print("Aluno reprovado por não atingir a nota minima!")
+
+for n in notas:
+    if n > maiorNota:
+        maiorNota = n
+
+print(maiorNota)
+
+## 2 
+
+numeros = [2,7,10,15,22,31,40]
+contaPar = 0
+contaImpar = 0
+maiorNumero = 0
+soma = sum(numeros)
+
+for n in numeros:
+    if n % 2 == 0:
+        contaPar += 1
+    else:
+        contaImpar += 1
+
+for n in numeros:
+    if n > maiorNumero:
+        maiorNumero = n
+
+print(f"Numeros pares são: {contaPar}")
+print(f"Numeros impares são: {contaImpar}")
+print(soma)
+print(maiorNumero)
 
 
-nota1 = float(input("Qual sua primeira nota?"))
-nota2 = float(input("Qual sua segunda nota?"))
-
-
-maior_nota = max(nota1, nota2)
-
-
-
-if nota1 >= 6 or nota2 >= 6:
-    print(f"O aluno atingiu a aprovação com a nota {maior_nota}")
-else:
-    print(f"Aluno foi reprovado pois nenhuma das notas atingiu o minimo.")
-
-def calculadora(x,y,z):
-    return (x*y)+z
-
-print(calculadora(10,2,3))
+    
