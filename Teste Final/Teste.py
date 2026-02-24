@@ -22,3 +22,6 @@ for n in numeros:
 print(sum(numeros))
 print(sum(numerosMaiorQue10))
 
+alunos = {"Luis": 8, "Bruna": 6, "Ana": 10, "Joao": 7}
+
+
