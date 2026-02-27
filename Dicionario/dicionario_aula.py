@@ -1,13 +1,18 @@
-## --*-- coding: utf-8 --*--
+def compara_idade(pessoas: dict[str, int]) -> tuple[str, int]:
+    soma = sum(pessoas.values())
+    media = soma / len(pessoas)
 
-meu_dicionario = {"L":"LUIS", "B":"BRUNA", "S":"SANDRA"}
+    maior_idade = max(pessoas, key=pessoas.get)
+    
+    return maior_idade, media
 
-print(meu_dicionario["B"])
+pessoas = {
+    "LUIS": 31,
+    "ELYDA": 29,
+    "GAEL": 3
+}
 
-for chave in meu_dicionario:
-    print(chave+":"+ meu_dicionario[chave])
+maior, media = compara_idade(pessoas)
 
-
-## aqui retorna tupla
-for i in meu_dicionario.items():
-    print(i)
+print(maior)
+print(media)
